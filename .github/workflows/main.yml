@@ -18,7 +18,6 @@ jobs:
           access_token: ${{ github.token }}
   deploy:
     if: ${{ github.event_name == 'push' }}
-    needs: [build]
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
