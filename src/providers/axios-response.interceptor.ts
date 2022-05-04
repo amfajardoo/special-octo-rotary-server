@@ -15,6 +15,13 @@ export class AxiosResponseInterceptor<T>
   implements NestInterceptor<T, Response<T>>
 {
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
+    if (
+      context.getArgs().length > 0 &&
+      context.getArgs()[0].path === '/api/healthcheck'
+    ) {
+      return next.handle();
+    }
+
     return next.handle().pipe(map(({ data }) => ({ data })));
   }
 }
