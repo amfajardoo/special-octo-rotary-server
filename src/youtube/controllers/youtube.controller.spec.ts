@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { SpotifyController } from './spotify.controller';
+import { YoutubeController } from './Youtube.controller';
 
-describe('SpotifyController', () => {
-  let controller: SpotifyController;
+describe('YoutubeController', () => {
+  let controller: YoutubeController;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      controllers: [SpotifyController],
+      controllers: [YoutubeController],
     }).compile();
 
-    controller = module.get<SpotifyController>(SpotifyController);
+    controller = module.get<YoutubeController>(YoutubeController);
   });
 
   it('should be defined', () => {
