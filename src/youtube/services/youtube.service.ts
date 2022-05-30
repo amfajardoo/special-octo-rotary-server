@@ -17,7 +17,7 @@ export class YoutubeService {
 
   getVideos(query: string): Observable<AxiosResponse<YoutubeResponse>> {
     return this.httpService.get(
-      `${this.url}/search?part=snippet&q=${query}&type=video&key=${this.apiKey}`,
+      `${this.url}/search?part=snippet&q=${query}&type=video&key=${this.apiKey}&maxResults=3`,
     );
   }
 }

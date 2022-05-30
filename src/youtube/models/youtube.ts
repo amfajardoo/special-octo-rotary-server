@@ -1,10 +1,19 @@
 export interface YoutubeVideo {
-  id: string;
-  title: string;
-  description: string;
-  thumbnail: string;
-  publishedAt: string;
-  channelTitle: string;
+  etag: string;
+  id: {
+    kind: string;
+    videoId: string;
+  };
+  kind: string;
+  snippet: {
+    publishedAt: string;
+    channelId: string;
+    channelTitle: string;
+    description: string;
+    liveBroadcastContent: string;
+    publishTime: string;
+    title: string;
+  };
 }
 
 export interface YoutubeResponse {

@@ -16,8 +16,8 @@ export class AxiosResponseInterceptor<T>
 {
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     if (
-      context.getArgs().length > 0 &&
-      context.getArgs()[0].path === '/api/healthcheck'
+      context.getArgs().length &&
+      context.getArgs()[0]?.path === '/api/healthcheck'
     ) {
       return next.handle();
     }
