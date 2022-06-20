@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [main]
     types: [opened, synchronize]
-    
+
 jobs:
   # Remove the previous builds if there is a new one running
   redundancy-check:
@@ -30,3 +30,4 @@ jobs:
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
           healthcheck: "https://${{ secrets.HEROKU_APP_NAME }}.herokuapp.com/api/healthcheck"
           rollbackonhealthcheckfailed: true
+          dontuseforce: true
