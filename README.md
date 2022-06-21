@@ -33,9 +33,10 @@ $ npm install
 ```
 
 create .env file and add your settings
-ALLOWED_ORIGIN=* # local environtment use *
-YT_API_KEY=***** # set your youtube api key to get the videos response
-PORT=3000 # default value is 3000 but you can use the port what you want
+ALLOWED_ORIGIN=* <!-- # local environtment use * -->
+
+YT_API_KEY=***** <!-- # set your youtube api key to get the videos response  -->
+PORT=3000 <!-- # default value is 3000 but you can use the port what you want  -->
 
 ## Running the app
 
